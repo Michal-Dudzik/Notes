@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Notes</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div id="app" class="notes">
+			<div class="notes__sidebar">
+				<!-- search bar -->
+				<div class="notes__search">
+					<input type="text" placeholder="Search" />
+				</div>
+				<!-- add new note -->
+				<button class="notes__add" type="button">Add Note</button>
+				<!-- notes list -->
+				<div class="notes__list">
+					<div class="notes__list-item notes__list-item--selected">
+						<div class="notes__small-title">Lecture Notes</div>
+						<div class="notes__small-body">I learnt nothing today.</div>
+						<div class="notes__small-updated">Thursday 3:30pm</div>
+					</div>
+				</div>
+			</div>
+			<!-- note content -->
+			<div class="notes__preview">
+				<input
+					class="notes__title"
+					type="text"
+					placeholder="Enter a title..." />
+				<textarea class="notes__body">I am the notes body...</textarea>
+			</div>
+		</div>
+		<script src="js/main.js" type="module"></script>
+
+		<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+		<script>
+			function addDarkmodeWidget() {
+				new Darkmode().showWidget();
+			}
+			window.addEventListener('load', addDarkmodeWidget);
+		</script>
+	</body>
+</html>
