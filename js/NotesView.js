@@ -10,8 +10,12 @@ export default class NotesView {
 		this.onNoteDelete = onNoteDelete;
 		this.root.innerHTML = `
             <div class="notes__sidebar">
-                <button class="notes__add" type="button">Add Note</button>
+			<div class="notes__search function__tiles">
+					<input type="text" placeholder="Search" />
+			</div>
+                
                 <div class="notes__list"></div>
+				<button class="notes__add function__tiles" type="button">Add Note</button>
             </div>
             <div class="notes__preview">
                 <input class="notes__title" type="text" placeholder="New Note...">
