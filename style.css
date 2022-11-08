@@ -5,7 +5,7 @@
 
 :root {
 	--background: rgb(235, 235, 235);
-	--selected: #eeeeee;
+	--selected: #000000;
 	--text: #000000;
 	--button: #009578;
 	--noteColor1: #ff0000;
@@ -33,7 +33,7 @@ body {
 }
 
 .notes__sidebar {
-	border-right: 2px solid #dddddd;
+	/* border-right: 2px solid #dddddd; */
 	flex-shrink: 0;
 	/* padding: 1em 0 1em 0; */
 	width: 300px;
@@ -60,6 +60,7 @@ body {
 .notes__search input {
 	margin-left: 2em;
 	border: none;
+	background-color: transparent;
 	width: 70%;
 }
 
@@ -125,15 +126,21 @@ body {
 }
 
 .notes__list-item {
-	/* background-color: var(--noteColor1); */
-
+	border-right: 3px solid var(--noteColor3);
 	cursor: pointer;
+}
+
+.notes__list-item:hover {
+	border-right: 3px solid var(--noteColor2);
+	background-color: #eeeeee;
+	transition: border-right 100ms ease-in-out, padding-right 100ms ease-in-out;
 }
 
 .notes__list-item--selected {
 	background: #eeeeee;
-	border-radius: 7px;
+	border-right: 5px solid var(--selected);
 	font-weight: bold;
+	transition: border-right 300ms ease-in-out, padding-right 300ms ease-in-out;
 }
 
 .notes__small-title,
