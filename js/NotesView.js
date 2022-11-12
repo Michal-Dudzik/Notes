@@ -13,7 +13,6 @@ export default class NotesView {
 			<div class="notes__search function__tiles">
 					<input type="text" placeholder="Search" />
 			</div>
-                
                 <div class="notes__list"></div>
 				<button class="notes__add function__tiles" type="button">Add Note</button>
             </div>
@@ -59,6 +58,8 @@ export default class NotesView {
 											timeStyle: 'short',
 										})}
                 </div>
+				<span class="material-symbols-outlined favorite"> star </span>
+				<span class="material-symbols-outlined delete"> delete </span>
             </div>
         `;
 	}
@@ -96,6 +97,17 @@ export default class NotesView {
 					if (doDelete) {
 						this.onNoteDelete(noteListItem.dataset.noteId);
 					}
+				});
+
+				// Add event listeners for favorite and delete buttons
+				noteListItem
+					.querySelector('.favorite')
+					.addEventListener('click', () => {
+						this.onNoteFavorite(noteListItem.dataset.noteId);
+					});
+
+				noteListItem.querySelector('.delete').addEventListener('click', () => {
+					this.onNoteDelete(noteListItem.dataset.noteId);
 				});
 			});
 	}
