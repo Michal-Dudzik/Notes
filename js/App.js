@@ -59,6 +59,15 @@ export default class App {
 				NotesAPI.deleteNote(noteId);
 				this._refreshNotes();
 			},
+			onNoteFavorite: (noteId) => {
+				const note = this.notes.find((note) => note.id == noteId);
+				NotesAPI.saveNote({
+					id: note.id,
+					favorite: !note.favorite,
+				});
+
+				this._refreshNotes();
+			},
 		};
 	}
 }

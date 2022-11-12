@@ -5,7 +5,7 @@
 
 :root {
 	--background: rgb(235, 235, 235);
-	--selected: #009578;
+	--selected: #00ffcc;
 	--text: #000000;
 	--button-text: #ffffff;
 	--button: #009578;
@@ -117,12 +117,13 @@ body {
 
 .notes__list {
 	overflow-y: auto;
-	height: 84%;
+	max-height: calc(100vh - 150px);
 }
 
 .notes__list-item {
-	border-right: 3px solid var(--noteColor3);
+	border-right: 3px solid var(--button);
 	cursor: pointer;
+	position: relative;
 }
 
 .notes__list-item:hover {
@@ -134,10 +135,6 @@ body {
 	border-right: 5px solid var(--selected);
 	font-weight: bold;
 	transition: border-right 300ms ease-in-out, padding-right 300ms ease-in-out;
-}
-
-.notes__list-item--selected .delete {
-	display: inline-block;
 }
 
 .notes__small-title,
@@ -191,10 +188,15 @@ body {
 }
 
 .delete {
+	position: absolute;
+	top: 10px;
+	right: 10px;
 	color: #8e0000;
-	/* display: none; */
 }
 
 .favorite {
+	position: absolute;
+	top: 10px;
+	right: 50px;
 	color: #d5d100;
 }

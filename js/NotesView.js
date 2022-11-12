@@ -89,15 +89,15 @@ export default class NotesView {
 					this.onNoteSelect(noteListItem.dataset.noteId);
 				});
 
-				noteListItem.addEventListener('dblclick', () => {
-					const doDelete = confirm(
-						'Are you sure you want to delete this note?'
-					);
+				// noteListItem.addEventListener('dblclick', () => {
+				// 	const doDelete = confirm(
+				// 		'Are you sure you want to delete this note?'
+				// 	);
 
-					if (doDelete) {
-						this.onNoteDelete(noteListItem.dataset.noteId);
-					}
-				});
+				// 	if (doDelete) {
+				// 		this.onNoteDelete(noteListItem.dataset.noteId);
+				// 	}
+				// });
 
 				// Add event listeners for favorite and delete buttons
 				noteListItem
