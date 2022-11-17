@@ -20,6 +20,9 @@ export default class NotesView {
                 <input class="notes__title" type="text" placeholder="New Note...">
                 <textarea class="notes__body">Take Note...</textarea>
             </div>
+			<button id="themeSwitcher">
+				<img src="images/moon.png" alt="moon" />
+			</button>
         `;
 
 		const btnAddNote = this.root.querySelector('.notes__add');

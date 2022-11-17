@@ -4,9 +4,37 @@
 }
 
 :root {
-	--background: rgb(235, 235, 235);
-	--selected: #00ffcc;
+	--red: #ae2012;
+	--purple: #5a189a;
+	--orange: #ff8500;
+	--green: #00c853;
+	--aquamarine: #0a9396;
+	--aquamarine2: #009578;
+	--blue: #00b0ff;
+	--beage: #fffbf4;
+	--dark-pink: #840033;
+	--gray-blue: #2e3840;
+	--gray-blue2: #1d2328;
+}
+
+.light {
+	--background: var(--beage);
+	--selected: #00cba2;
 	--text: #000000;
+	--button-text: #ffffff;
+	--button: var(--aquamarine);
+	--noteColor1: #ff0000;
+	--noteColor2: #ffc400;
+	--noteColor3: #0180ff;
+	--noteColor4: #00ff22;
+	--noteColor5: #ff6200;
+	--noteColorCustom: #a0a0a0;
+}
+
+.dark {
+	--background: var(--gray-blue2);
+	--selected: #00cba2;
+	--text: #ffffff;
 	--button-text: #ffffff;
 	--button: #009578;
 	--noteColor1: #ff0000;
@@ -23,6 +51,26 @@ body {
 	margin: 0;
 	overflow-y: hidden;
 	font-family: 'Roboto Condensed', sans-serif;
+	background-color: var(--background);
+	transition: background 500ms ease-in-out, color 1000ms ease-in-out;
+}
+
+#themeSwitcher {
+	position: absolute;
+	bottom: 2em;
+	right: 2em;
+	height: 70px;
+	width: 70px;
+	border: 0;
+	background-color: transparent;
+}
+
+#themeSwitcher:hover {
+	cursor: pointer;
+}
+
+#themeSwitcher img {
+	width: 100%;
 }
 
 .notes {
@@ -53,6 +101,7 @@ body {
 }
 
 .notes__search input {
+	color: var(--button-text);
 	margin-left: 2em;
 	border: none;
 	background-color: transparent;
@@ -165,6 +214,9 @@ body {
 
 .notes__title,
 .notes__body {
+	background-color: var(--background);
+	color: var(--text);
+	transition: background 500ms ease-in-out;
 	border: none;
 	outline: none;
 	width: 100%;
