@@ -5,6 +5,7 @@
 
 :root {
 	--red: #ae2012;
+	--gold: #f1c40f;
 	--purple: #5a189a;
 	--orange: #ff8500;
 	--green: #00c853;
@@ -12,16 +13,20 @@
 	--aquamarine2: #009578;
 	--blue: #00b0ff;
 	--beage: #fffbf4;
+	--light-grey: #cacaca;
+	--white: #ffffff;
 	--dark-pink: #840033;
-	--gray-blue: #2e3840;
+	--gray-blue: #2c353c;
 	--gray-blue2: #1d2328;
+	--black: #000000;
 }
 
 .light {
 	--background: var(--beage);
-	--selected: #00cba2;
-	--text: #000000;
-	--button-text: #ffffff;
+	--selected-border: var(--blue);
+	--selected-note: var(--light-grey);
+	--text: var(--black);
+	--button-text: var(--black);
 	--button: var(--aquamarine);
 	--noteColor1: #ff0000;
 	--noteColor2: #ffc400;
@@ -29,20 +34,25 @@
 	--noteColor4: #00ff22;
 	--noteColor5: #ff6200;
 	--noteColorCustom: #a0a0a0;
+	--delete: var(--dark-pink);
+	--favorite: var(--gold);
 }
 
 .dark {
 	--background: var(--gray-blue2);
-	--selected: #00cba2;
-	--text: #ffffff;
+	--selected-border: var(--orange);
+	--selected-note: var(--gray-blue);
+	--text: var(--white);
 	--button-text: #ffffff;
-	--button: #009578;
+	--button: var(--purple);
 	--noteColor1: #ff0000;
 	--noteColor2: #ffc400;
 	--noteColor3: #0180ff;
 	--noteColor4: #00ff22;
 	--noteColor5: #ff6200;
 	--noteColorCustom: #a0a0a0;
+	--delete: var(--dark-pink);
+	--favorite: var(--gold);
 }
 
 html,
@@ -71,6 +81,37 @@ body {
 
 #themeSwitcher img {
 	width: 100%;
+}
+
+#color-picker {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.color-picker-button {
+	cursor: pointer;
+	border-radius: 50%;
+}
+
+#red {
+	color: var(--red);
+}
+
+#green {
+	color: var(--green);
+}
+
+#blue {
+	color: var(--blue);
+}
+
+#yellow {
+	color: var(--gold);
+}
+
+#grey {
+	color: var(--light-grey);
 }
 
 .notes {
@@ -131,6 +172,7 @@ body {
 	width: 25px;
 	border-top-right-radius: 25px;
 	box-shadow: 0 -25px 0 0 var(--button);
+	z-index: 2;
 }
 
 .notes__add {
@@ -176,18 +218,19 @@ body {
 }
 
 .notes__list-item:hover {
-	background-color: #eeeeee;
+	background-color: var(--selected-note);
 }
 
 .notes__list-item--selected {
-	background: #eeeeee;
-	border-right: 5px solid var(--selected);
+	background: var(--selected-note);
+	border-right: 5px solid var(--selected-border);
 	font-weight: bold;
 	transition: border-right 300ms ease-in-out, padding-right 300ms ease-in-out;
 }
 
 .notes__small-title,
 .notes__small-updated {
+	color: var(--text);
 	padding: 10px;
 }
 
@@ -196,11 +239,12 @@ body {
 }
 
 .notes__small-body {
+	color: var(--text);
 	padding: 0 10px;
 }
 
 .notes__small-updated {
-	color: #aaaaaa;
+	color: var(--text);
 	font-style: italic;
 	text-align: right;
 }
@@ -243,12 +287,12 @@ body {
 	position: absolute;
 	top: 10px;
 	right: 10px;
-	color: #8e0000;
+	color: var(--delete);
 }
 
 .favorite {
 	position: absolute;
 	top: 10px;
 	right: 50px;
-	color: #d5d100;
+	color: var(--favorite);
 }

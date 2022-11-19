@@ -18,7 +18,14 @@ export default class NotesView {
             </div>
             <div class="notes__preview">
                 <input class="notes__title" type="text" placeholder="New Note...">
-                <textarea class="notes__body">Take Note...</textarea>
+				<div id="color-picker">
+					<span id="red" class="material-symbols-outlined color-picker-button">trip_origin</span>
+					<span id="green" class="material-symbols-outlined color-picker-button">trip_origin</span>
+					<span id="blue" class="material-symbols-outlined color-picker-button">trip_origin</span>
+					<span id="yellow" class="material-symbols-outlined color-picker-button">trip_origin</span>
+					<span id="grey" class="material-symbols-outlined color-picker-button">trip_origin</span>
+			</div>
+                <textarea class="notes__body" id="editor" name="editor">Take Note...</textarea>
             </div>
 			<button id="themeSwitcher">
 				<img src="images/moon.png" alt="moon" />
