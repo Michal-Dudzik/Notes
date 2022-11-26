@@ -1,3 +1,5 @@
+import editor from './editor.js';
+
 export default class NotesView {
 	constructor(
 		root,
@@ -25,11 +27,13 @@ export default class NotesView {
 					<span id="yellow" class="material-symbols-outlined color-picker-button">trip_origin</span>
 					<span id="grey" class="material-symbols-outlined color-picker-button">trip_origin</span>
 			</div>
-                <textarea class="notes__body" id="editor" name="editor">Take Note...</textarea>
+                <textarea class="notes__body" >Take Note...</textarea>
             </div>
 			<button id="themeSwitcher">
 				<img src="images/moon.png" alt="moon" />
 			</button>
+
+			<span id="notification" class="material-symbols-outlined favorite"> notifications </span>
         `;
 
 		const btnAddNote = this.root.querySelector('.notes__add');

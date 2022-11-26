@@ -1,5 +1,6 @@
 @import 'mainNote.css';
 @import 'sidebar.css';
+@import 'editor.css';
 
 ::-webkit-scrollbar {
 	width: 0;
@@ -106,4 +107,12 @@ body {
 	top: 10px;
 	right: 50px;
 	color: var(--favorite);
+}
+
+#notification {
+	position: absolute;
+	top: 1em;
+	right: 1em;
+	font-size: 30px;
+	user-select: none;
 }
