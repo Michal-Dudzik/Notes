@@ -15,6 +15,15 @@ export default class NotesView {
 			
 			<div class="notes__search function__tiles">
 					<input type="text" placeholder="Search" />
+					<div class="favorite__list">
+						<span class="material-symbols-outlined" style="color:var(--white)"> folder_copy </span>
+						<span class="material-symbols-outlined" style="color:var(--gold)"> star </span>
+						<span class="material-symbols-outlined color-picker-button" style="color:var(--noteColor1)">trip_origin</span>
+						<span class="material-symbols-outlined color-picker-button" style="color:var(--noteColor4)">trip_origin</span>
+						<span class="material-symbols-outlined color-picker-button" style="color:var(--noteColor3)">trip_origin</span>
+						<span class="material-symbols-outlined color-picker-button" style="color:var(--noteColor2)">trip_origin</span>
+						<span class="material-symbols-outlined color-picker-button" style="color:var(--noteColor5)">trip_origin</span>
+					</div>
 			</div>
                 <div class="notes__list"></div>
 				<button class="notes__add function__tiles" type="button">Add Note</button>
@@ -27,7 +36,7 @@ export default class NotesView {
 					<span id="green" class="material-symbols-outlined color-picker-button">trip_origin</span>
 					<span id="blue" class="material-symbols-outlined color-picker-button">trip_origin</span>
 					<span id="yellow" class="material-symbols-outlined color-picker-button">trip_origin</span>
-					<span id="grey" class="material-symbols-outlined color-picker-button">trip_origin</span>
+					<span id="orange" class="material-symbols-outlined color-picker-button">trip_origin</span>
 			</div>
                 <textarea class="notes__body" >Take Note...</textarea>
             </div>
@@ -74,12 +83,11 @@ export default class NotesView {
 											timeStyle: 'short',
 										})}
                 </div>
-				<span class="material-symbols-outlined favorite"> star </span>
+				<label><input type="checkbox"><span class="label material-symbols-outlined favorite" > star </span></label>
 				<span class="material-symbols-outlined delete"> delete </span>
             </div>
         `;
 	}
-
 	updateNoteList(notes) {
 		const notesListContainer = this.root.querySelector('.notes__list');
 
@@ -104,11 +112,11 @@ export default class NotesView {
 					this.onNoteSelect(noteListItem.dataset.noteId);
 				});
 
-				noteListItem
-					.querySelector('.favorite')
-					.addEventListener('click', () => {
-						this.onNoteFavorite(noteListItem.dataset.noteId);
-					});
+				// noteListItem
+				// 	.querySelector('.favorite')
+				// 	.addEventListener('click', () => {
+				// 		this.onNoteFavorite(noteListItem.dataset.noteId);
+				// 	});
 
 				noteListItem.querySelector('.delete').addEventListener('click', () => {
 					this.onNoteDelete(noteListItem.dataset.noteId);

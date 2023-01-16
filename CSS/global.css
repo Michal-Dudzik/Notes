@@ -42,7 +42,7 @@
 	--noteColor5: #ff6200;
 	--noteColorCustom: #a0a0a0;
 	--delete: var(--dark-pink);
-	--favorite: var(--gold);
+	--favorite: var(--black);
 }
 
 .dark {
@@ -60,7 +60,7 @@
 	--noteColor5: #ff6200;
 	--noteColorCustom: #a0a0a0;
 	--delete: var(--dark-pink);
-	--favorite: var(--gold);
+	--favorite: var(--white);
 }
 
 html,
@@ -106,6 +106,8 @@ body {
 	position: absolute;
 	top: 10px;
 	right: 50px;
+	user-select: none;
+	-webkit-user-select: none;
 	color: var(--favorite);
 }
 
