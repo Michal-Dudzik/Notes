@@ -12,11 +12,13 @@ export default class NotesView {
 		this.onNoteDelete = onNoteDelete;
 		this.root.innerHTML = `
             <div class="notes__sidebar">
+			
 			<div class="notes__search function__tiles">
 					<input type="text" placeholder="Search" />
 			</div>
                 <div class="notes__list"></div>
 				<button class="notes__add function__tiles" type="button">Add Note</button>
+				
             </div>
             <div class="notes__preview">
                 <input class="notes__title" type="text" placeholder="New Note...">
@@ -81,7 +83,6 @@ export default class NotesView {
 	updateNoteList(notes) {
 		const notesListContainer = this.root.querySelector('.notes__list');
 
-		// Empty list
 		notesListContainer.innerHTML = '';
 
 		for (const note of notes) {
@@ -103,17 +104,6 @@ export default class NotesView {
 					this.onNoteSelect(noteListItem.dataset.noteId);
 				});
 
-				// noteListItem.addEventListener('dblclick', () => {
-				// 	const doDelete = confirm(
-				// 		'Are you sure you want to delete this note?'
-				// 	);
-
-				// 	if (doDelete) {
-				// 		this.onNoteDelete(noteListItem.dataset.noteId);
-				// 	}
-				// });
-
-				// Add event listeners for favorite and delete buttons
 				noteListItem
 					.querySelector('.favorite')
 					.addEventListener('click', () => {

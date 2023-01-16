@@ -14,6 +14,13 @@
 	width: 100%;
 }
 
+.favorite__list {
+	overflow-y: hidden;
+	max-height: calc(100vh - 150px);
+	border-radius: 0 25px 0 25px;
+	transform: translateY(50px);
+}
+
 .notes__search {
 	position: relative;
 	margin-top: 1em;
