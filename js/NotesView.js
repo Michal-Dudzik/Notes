@@ -18,11 +18,11 @@ export default class NotesView {
 					<div class="favorite__list">
 						<span class="material-symbols-outlined" style="color:var(--white)"> folder_copy </span>
 						<span class="material-symbols-outlined" style="color:var(--gold)"> star </span>
-						<span class="material-symbols-outlined color-picker-button" style="color:var(--noteColor1)">trip_origin</span>
-						<span class="material-symbols-outlined color-picker-button" style="color:var(--noteColor4)">trip_origin</span>
-						<span class="material-symbols-outlined color-picker-button" style="color:var(--noteColor3)">trip_origin</span>
-						<span class="material-symbols-outlined color-picker-button" style="color:var(--noteColor2)">trip_origin</span>
-						<span class="material-symbols-outlined color-picker-button" style="color:var(--noteColor5)">trip_origin</span>
+						<span class="material-symbols-outlined" style="color:var(--noteColor1)">trip_origin</span>
+						<span class="material-symbols-outlined" style="color:var(--noteColor4)">trip_origin</span>
+						<span class="material-symbols-outlined" style="color:var(--noteColor3)">trip_origin</span>
+						<span class="material-symbols-outlined" style="color:var(--noteColor2)">trip_origin</span>
+						
 					</div>
 			</div>
                 <div class="notes__list"></div>
@@ -32,11 +32,11 @@ export default class NotesView {
             <div class="notes__preview">
                 <input class="notes__title" type="text" placeholder="New Note...">
 				<div id="color-picker">
-					<span id="red" class="material-symbols-outlined color-picker-button">trip_origin</span>
-					<span id="green" class="material-symbols-outlined color-picker-button">trip_origin</span>
-					<span id="blue" class="material-symbols-outlined color-picker-button">trip_origin</span>
-					<span id="yellow" class="material-symbols-outlined color-picker-button">trip_origin</span>
-					<span id="orange" class="material-symbols-outlined color-picker-button">trip_origin</span>
+					<span class="red material-symbols-outlined color-picker-button" data-color="var(--red)">trip_origin</span>
+					<span class="green material-symbols-outlined color-picker-button" data-color="var(--green)">trip_origin</span>
+					<span class="blue material-symbols-outlined color-picker-button" data-color="var(--blue)">trip_origin</span>
+					<span class="yellow material-symbols-outlined color-picker-button" data-color="var(--yellow)">trip_origin</span>
+					<span class="material-symbols-outlined color-picker-button" style="color:var(--text)">format_color_reset</span>
 			</div>
                 <textarea class="notes__body" >Take Note...</textarea>
             </div>

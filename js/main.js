@@ -25,14 +25,16 @@ themeSwitcher.addEventListener('click', () => {
 	}
 });
 
-// TODO: dodaj zmianę koloru tytułu w ramach wybranego motywu
-const colorPicker = document.getElementsByClassName('color-picker-button');
+// when user click on color-picker-button change the color of only that note title to the color of the button
+const colorPicker = document.querySelectorAll('.color-picker-button');
 
-// colorPicker.forEach((element) => {
-// 	addEventListener('click', () => {
-// 		console.log('hey');
-// 	});
-// });
+colorPicker.forEach((element) => {
+	element.addEventListener('click', () => {
+		const color = element.getAttribute('data-color');
+		const title = document.querySelector('.notes__title');
+		title.style.color = color;
+	});
+});
 
 const notification = document.getElementById('notification');
 const audio = document.getElementById('notification-audio');

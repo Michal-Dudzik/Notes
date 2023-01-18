@@ -33,10 +33,10 @@ export default class NotesAPI {
 	}
 
 	//option to add note to favorites, and display only favorites
-	static addFavorite(id) {
-		const notes = NotesAPI.getAllNotes();
-		const newNotes = notes.filter((note) => note.id != id);
+	// static addFavorite(id) {
+	// 	const notes = NotesAPI.getAllNotes();
+	// 	const newNotes = notes.filter((note) => note.id != id);
 
-		localStorage.setItem('notesapp-notes', JSON.stringify(newNotes));
-	}
+	// 	localStorage.setItem('notesapp-notes', JSON.stringify(newNotes));
+	// }
 }

@@ -10,24 +10,24 @@
 	border-radius: 50%;
 }
 
-#red {
+.red {
 	color: var(--red);
 }
 
-#green {
+.green {
 	color: var(--green);
 }
 
-#blue {
+.blue {
 	color: var(--blue);
 }
 
-#yellow {
+.yellow {
 	color: var(--yellow);
 }
 
-#orange {
-	color: var(--orange);
+.white {
+	color: var(--white);
 }
 
 .notes {
